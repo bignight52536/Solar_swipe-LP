@@ -32,8 +32,9 @@
                 <div class="main-copy">
                     電気代、ここまで下げられるんです。
                 </div>
-                <div class="main-anime">
-                    <img src="./assets/images/main-anime.svg" alt="main-anime">
+                <div class="main-anime" style="overflow: hidden; position: relative;">
+                    <img id="mainAnimeImg" src="./assets/images/main-anime.svg" alt="main-anime" style="position: absolute; left: 0; top: 0; width: 100%;">
+                    <img id="mainAnimeImgClone" src="./assets/images/main-anime.svg" alt="main-anime-clone" style="position: absolute; left: 0; top: 0; width: 100%;">
                 </div>
             </div>
         </section>
@@ -89,6 +90,7 @@
             © 2025 ECODA Inc. All Rights Reserved.
         </section>
     </main>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
