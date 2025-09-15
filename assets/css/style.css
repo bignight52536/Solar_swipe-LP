@@ -137,7 +137,7 @@ header {
     gap: 10px;
 }
 
-.back-btn {
+.back-btn, .next-btn {
     margin-top: 20px;
     border: none;
     background-color: unset;
@@ -154,4 +154,91 @@ header {
     width: 440px;
     position: fixed;
     bottom: 0;
+}
+
+
+
+.address {
+    margin-top: 80px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    width: 320px;
+    gap: 30px;
+}
+
+.required {
+    background-color: #B40000;
+    color: #ffffff;
+    font-size: 10px;
+    padding: 3px;
+    padding-inline: 5px;
+    text-align: center;
+    line-height: 15px;
+}
+
+.address-select {
+    font-size: 16px;
+    height: 44px;
+    padding: 0 10px;
+}
+
+.place-holder {
+    color: rgb(194, 194, 194);
+}
+
+.name {
+    width: 320px;
+    margin-top: 30px; 
+    font-size: 20px;
+}
+
+.phone {
+    font-size: 20px;
+    width: 320px;
+}
+.email {
+    font-size: 20px;
+    width: 320px;
+}
+.label {
+    display: flex;
+    width: 320px;
+}
+
+.warning {
+    font-size: 10px;
+    color: #B40000;
+    width: 400px;
+}
+input {
+    font-size: 16px;
+    line-height: 40px;
+    padding: 0 10px;
+}
+
+.info {
+    gap: 25px;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 320px;
+}
+
+.thanks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-time {
+    font-size: 14px;
+    color: #787878;
+    margin-bottom: 30px;
 }
