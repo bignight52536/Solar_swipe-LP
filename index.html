@@ -18,8 +18,8 @@
 <body>
     <header>
         <div class="header-main">
-            <div class="logo">
-                <img src="./assets/images/logo-blue.svg" alt="logo-blue">
+            <div class="logo" onclick="">
+                <a href=""><img src="./assets/images/logo-blue.svg" alt="logo-blue"></a>
             </div>
             <div class="cta">
                 <a href="#" class="btn">無料でご相談</a>
@@ -46,7 +46,7 @@
         <div class="free-survey-title">
             <img src="./assets/images/free-survey-title.svg" alt="free-survey-title">
         </div>
-        <section class="survey-house">
+        <section class="survey-house survey-section active" data-step="1">
             <div class="progress">
                 <div class="progress-icon">
                     <img src="./assets/images/progress-house.svg" alt="progress-house">
@@ -83,12 +83,9 @@
                         </div>
                     </div>
                 </div>
-                <button class="back-btn">
-                    <img src="./assets/images/back-btn.svg" alt="back-btn">
-                </button>
             </div>
         </section>
-        <section class="survey-electric-price">
+        <section class="survey-electric-price survey-section" data-step="2">
             <div class="progress">
                 <div class="progress-icon">
                     <img src="./assets/images/progress-price.svg" alt="progress-price">
@@ -121,12 +118,12 @@
                         </div>
                     </div>
                 </div>
-                <button class="back-btn">
+                <button class="back-btn" type="button">
                     <img src="./assets/images/back-btn.svg" alt="back-btn">
                 </button>
             </div>
         </section>
-        <section class="survey-age">
+        <section class="survey-age survey-section" data-step="3">
             <div class="progress">
                 <div class="progress-icon">
                     <img src="./assets/images/progress-age.svg" alt="progress-age">
@@ -151,12 +148,12 @@
                         <img src="./assets/images/70years.svg" alt="70years">
                     </div>
                 </div>
-                <button class="back-btn">
+                <button class="back-btn" type="button">
                     <img src="./assets/images/back-btn.svg" alt="back-btn">
                 </button>
             </div>
         </section>
-        <section class="survey-period">
+        <section class="survey-period survey-section" data-step="4">
             <div class="progress">
                 <div class="progress-icon">
                     <img src="./assets/images/progress-period.svg" alt="progress-period">
@@ -181,15 +178,15 @@
                         <img src="./assets/images/period-btn-red.svg" alt="period-btn-red">
                     </div>
                 </div>
-                <button class="back-btn">
+                <button class="back-btn" type="button">
                     <img src="./assets/images/back-btn.svg" alt="back-btn">
                 </button>
             </div>
         </section>
-        <section class="survey-period">
+        <section class="survey-address survey-section" data-step="5">
             <div class="progress">
                 <div class="progress-icon">
-                    <img src="./assets/images/progress-period.svg" alt="progress-period">
+                    <img src="./assets/images/progress-address.svg" alt="progress-address">
                 </div>
                 <div class="progress-bar"></div>
             </div>
@@ -198,7 +195,7 @@
                     <label for="address" class="address">ご住所
                         <span class="required">必須</span>
                     </label>
-                    <select id="address" name="address" class="address-select">
+                    <select id="address" name="address" class="address-select" required>
                         <option value="" class="place-holder">選択してください</option>
                         <option value="tokyo">広島市</option>
                         <option value="osaka">呉市</option>
@@ -217,16 +214,16 @@
                     </select>
                 </div>
                 <div class="btn-group">
-                    <button class="back-btn">
+                    <button class="back-btn" type="button">
                         <img src="./assets/images/back-btn.svg" alt="back-btn">
                     </button>
-                    <button class="next-btn">
+                    <button class="next-btn" type="button">
                         <img src="./assets/images/next-btn.svg" alt="next-btn">
                     </button>
                 </div>
             </div>
         </section>
-        <section class="survey-info">
+        <section class="survey-info survey-section" data-step="6">
             <div class="progress">
                 <div class="progress-icon">
                     <img src="./assets/images/progress-info.svg" alt="progress-info">
@@ -258,16 +255,16 @@
                     <input type="text" id="email" name="email" class="email-input" placeholder="例：example@gmail.com" required>
                 </div>
                 <div class="btn-group">
-                    <button class="back-btn">
+                    <button class="back-btn" type="button">
                         <img src="./assets/images/back-btn.svg" alt="back-btn">
                     </button>
-                    <button class="next-btn">
+                    <button class="next-btn" type="button">
                         <img src="./assets/images/next-btn.svg" alt="next-btn">
                     </button>
                 </div>
             </div>
         </section>
-        <section class="thanks">
+        <section class="thanks survey-section" data-step="7">
             <img src="./assets/images/thx-text.svg" alt="thanks">
             <img src="./assets/images/thx-image.svg" alt="thanks">
             <div class="service-time">
