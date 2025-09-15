@@ -86,6 +86,7 @@
 <path d="M11.2329 68.8406L12.0499 68.8268L12.0499 62.1111L14.1829 60.5137L12.0148 61.505L11.8044 57.8683L13.4373 56.1998L11.7811 57.4642L11.5707 53.8276L11.5132 58.6741L9.74898 56.9829L11.5072 59.1789L11.4924 60.4267C11.2957 60.3051 9.08374 59.3496 8.00236 58.8871L11.4837 61.16L11.2329 68.8406Z" fill="#572900"/>
 <rect x="3" y="5" width="66" height="5" rx="2.5" fill="#D3D3D3" fill-opacity="0.5"/>
 </g>
+<rect x="2.5" y="1.5" width="69" height="69" rx="4.5" stroke="#2FBE6F"/>
 </g>
 <defs>
 <filter id="filter0_d_231_6186" x="0" y="0" width="74" height="74" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">

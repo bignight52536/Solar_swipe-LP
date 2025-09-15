@@ -264,8 +264,8 @@ input {
 }
 
 .thanks img {
-    margin-left: 50%;
-    transform: translateX(-50%);
+    margin: 0 auto;
+    display: flex;
 }
 
 .service-time {
@@ -279,7 +279,6 @@ input {
 @media (max-width: 440px) {
     body {
         max-width: 100%;
-        padding-inline: 10px;
     }
     .header-main { height: 56px; }
     .main-copy { width: 100%; font-size: 15px; }
@@ -288,6 +287,6 @@ input {
     .progress-icon { left: 20px; }
     .answer { gap: 8px; }
     .copylight { width: 100%; font-size: 9px; }
-    .address, .label, .btn-group { width: 100%; }
+    /*.address, .label, .btn-group { width: 100%; }*/
     .warning { width: 100%; }
 }
