@@ -7,10 +7,10 @@
     <meta name="description"
         content="省エネ相談室では、太陽光発電・ソーラーパネルの販売から導入サポートまでを一貫してご提供しています。再生可能エネルギーを活用することで、毎月の電気代を削減しながら、環境に優しい持続可能な暮らしを実現できます。補助金や設置費用のご相談も可能ですので、安心して導入をご検討いただけます。">
     <title>省エネ相談室</title>
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon.svg">
     <link rel="manifest" href="./assets/images/site.webmanifest">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -22,7 +22,7 @@
                 <a href=""><img src="./assets/images/logo-blue.svg" alt="logo-blue"></a>
             </div>
             <div class="cta">
-                <a href="#" class="btn">無料でご相談</a>
+                <a href="#" class="btn" onclick="location.reload()">無料でご相談</a>
             </div>
         </div>
     </header>
@@ -252,7 +252,8 @@
                     <label for="email" class="email">メールアドレス
                         <span class="required">必須</span>
                     </label>
-                    <input type="text" id="email" name="email" class="email-input" placeholder="例：example@gmail.com" required>
+                    <input type="email" id="email" name="email" class="email-input" placeholder="例：example@gmail.com"
+                        required>
                 </div>
                 <div class="btn-group">
                     <button class="back-btn" type="button">
@@ -264,7 +265,65 @@
                 </div>
             </div>
         </section>
-        <section class="thanks survey-section" data-step="7">
+        <section class="survey-audit survey-section" data-step="7">
+            <div class="progress">
+                <div class="progress-icon">
+                    <img src="./assets/images/progress-info.svg" alt="progress-audit">
+                </div>
+                <div class="progress-bar"></div>
+            </div>
+            <div class="main-survey audit">
+                <div class="survey-title">
+                    入力内容の確認
+                </div>
+                <div class="audit-card">
+                    <div class="audit-grid">
+                        <div class="audit-item">
+                            <span class="audit-label">家の種類</span>
+                            <span id="audit-house" class="audit-value">一戸建て</span>
+                        </div>
+                        <div class="audit-item">
+                            <span class="audit-label">毎月の電気代</span>
+                            <span id="audit-price" class="audit-value">¥12,000</span>
+                        </div>
+                        <div class="audit-item">
+                            <span class="audit-label">年齢</span>
+                            <span id="audit-age" class="audit-value">35歳</span>
+                        </div>
+                        <div class="audit-item">
+                            <span class="audit-label">設置検討時期</span>
+                            <span id="audit-period" class="audit-value">半年以内</span>
+                        </div>
+                        <div class="audit-item">
+                            <span class="audit-label">住所</span>
+                            <span id="audit-address" class="audit-value">東京都渋谷区</span>
+                        </div>
+                        <div class="audit-item">
+                            <span class="audit-label">名前</span>
+                            <span id="audit-name" class="audit-value">山田太郎</span>
+                        </div>
+                        <div class="audit-item">
+                            <span class="audit-label">電話番号</span>
+                            <span id="audit-phone" class="audit-value">090-1234-5678</span>
+                        </div>
+                        <div class="audit-item">
+                            <span class="audit-label">メールアドレス</span>
+                            <span id="audit-email" class="audit-value">taro@example.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-group">
+                    <button class="back-btn" type="button">
+                        <img src="./assets/images/back-btn.svg" alt="back-btn">
+                    </button>
+                    <button class="submit-btn" type="button">
+                        送信する
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="thanks survey-section" data-step="8">
             <img src="./assets/images/thx-text.svg" alt="thanks">
             <img src="./assets/images/thx-image.svg" alt="thanks">
             <div class="service-time">

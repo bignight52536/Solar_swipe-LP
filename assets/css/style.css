@@ -101,7 +101,7 @@ header {
 
 .progress-icon {
     position: absolute;
-    top: -18px;
+    top: -30px;
     left: 60px;
 }
 
@@ -114,6 +114,7 @@ header {
     --progress: 0%;
     width: 100%;
     height: 5px;
+    margin-top: 25px;
     background-color: #e5e5e5;
 }
 
@@ -170,13 +171,56 @@ header {
     bottom: 0;
 }
 
-/* Survey section visibility */
+/* Smooth survey section transitions only */
 .survey-section {
     display: none !important;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 280ms ease-out, transform 280ms ease-out;
 }
-
 .survey-section.active {
     display: block !important;
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Keep leaving element visible for the fade-out */
+.survey-section.leaving { display: block !important; opacity: 0; transform: translateY(8px); }
+/* Ensure entering element can start its fade-in */
+.survey-section.entering { display: block !important; }
+
+/* Subtle progress icon easing (left is set in JS) */
+.progress-icon { transition: left 280ms ease-out; }
+
+/* Clickable feedback: pointer + gentle hover/active */
+.back-btn, .next-btn,
+.house-survey, .price-survey, .age-survey, .period-survey,
+.answer img,
+.cta .btn, .submit-btn {
+    cursor: pointer;
+    transition: transform 160ms ease-out, filter 160ms ease-out;
+}
+.back-btn:hover, .next-btn:hover,
+.house-survey:hover, .price-survey:hover, .age-survey:hover, .period-survey:hover,
+.answer img:hover, .submit-btn:hover
+.cta .btn:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.03);
+}
+.back-btn:active, .next-btn:active,
+.house-survey:active, .price-survey:active, .age-survey:active, .period-survey:active,
+.answer img:active, .submit-btn:active
+.cta .btn:active {
+    transform: translateY(0) scale(0.98);
+    filter: brightness(0.98);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .survey-section, .progress-icon,
+    .back-btn, .next-btn, .answer img,
+    .house-survey, .price-survey, .age-survey, .period-survey, .cta .btn {
+        transition: none !important;
+    }
 }
 
 /* Disable back button on first section */
@@ -207,7 +251,7 @@ header {
 
 .address-select {
     font-size: 16px;
-    height: 44px;
+    height: 50px;
     padding: 0 10px;
 }
 
@@ -246,7 +290,7 @@ input {
 }
 
 .info {
-    gap: 25px;
+    gap: 20px;
 }
 
 .btn-group {
@@ -275,6 +319,22 @@ input {
     margin-bottom: 30px;
 }
 
+.submit-btn {
+    height: 40px;
+    background: unset;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: 500;
+    background-color: #022771;
+    color: white;
+    padding-inline: 14px;
+    border: 1px solid white;
+    box-shadow: 0 2px 4px 0.25px rgb(0 0 0 / 25%);
+    border-radius: 3px;
+}
+
 /* Responsive: adapt under 440px */
 @media (max-width: 440px) {
     body {
@@ -289,4 +349,49 @@ input {
     .copylight { width: 100%; font-size: 9px; }
     /*.address, .label, .btn-group { width: 100%; }*/
     .warning { width: 100%; }
+}
+
+
+.audit-card {
+  width: 320px;
+  max-width: 600px;
+  padding: 15px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.audit-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #333;
+  text-align: center;
+}
+
+.audit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 15px;
+}
+
+.audit-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.audit-label {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.audit-value {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #222;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: #f7f9fc;
 }
